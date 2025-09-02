@@ -1,0 +1,15 @@
+FROM php:8.2-apache
+
+# Install PHP extensions for MySQL support and enable Apache modules if needed
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Clean existing files from Apache’s web root (optional, but ensures clean state)
+RUN rm -rf /var/www/html/*
+
+# Copy your backend PHP scripts into the container
+COPY get_scores.php     /var/www/html/
+COPY submit_score.php   /var/www/html/
+
+# Expose HTTP port
+EXPOSE 80
+

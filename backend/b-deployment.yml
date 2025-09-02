@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-backend-1
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: php-backend-1
+  template:
+    metadata:
+      labels:
+        app: php-backend-1
+    spec:
+      containers:
+      - name: bc1
+        image: shruti201/bimg
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: mysql-config
+        - secretRef:
+            name: mysql-secret
+

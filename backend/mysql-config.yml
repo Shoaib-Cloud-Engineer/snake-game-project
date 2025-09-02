@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  
+data:
+  DB_HOST: database-1.cw9y2e0g8ldr.us-east-1.rds.amazonaws.com
