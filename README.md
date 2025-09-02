@@ -49,6 +49,7 @@ Includes Leaderboard to store player scores
 ✅ Scalable backend with replicas
 
 ⚙️ Deployment Guide
+
 1️⃣ Clone Repository
 git clone https://github.com/<your-username>/snakegame-k8s.git
 cd snakegame-k8s
