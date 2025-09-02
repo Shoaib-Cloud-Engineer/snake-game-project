@@ -11,7 +11,7 @@ Deployed on AWS EKS (Kubernetes) with proper Services, Secrets, and ConfigMaps
 Includes Leaderboard to store player scores
 
 📸 Screenshots
-
+![Snake Game Screenshot](./game-screenshot.png)
 🕹️ Game UI
 
 
@@ -20,20 +20,23 @@ Includes Leaderboard to store player scores
 
 📂 Project Structure
 .
-├── frontend/                  # Nginx + Game UI
-│   ├── index.html             # Game page
-│   ├── game.js                # Game logic + API calls
+├── frontend/                  
+│   ├── index.html             
+│   ├── game.js               
 │   ├── Dockerfile
 │   └── frontend-deployment.yml svc.yml
+
+
+
 │
-├── backend/                   # PHP + Apache backend
+├── backend/                   
 │   ├── get_scores.php
 │   ├── submit_score.php
 │   ├── Dockerfile
 │   ├── backend-deployment.yml
-│   └── backend-svc.yml                       # Kubernetes configs
-│   ├── mysql-secret.yml       # DB creds (base64)
-│   ├── mysql-config.yml       # RDS endpoint
+│   └── backend-svc.yml                      
+│   ├── mysql-secret.yml       
+│   ├── mysql-config.yml       
 └── README.md
 
 🚀 Features
